@@ -6,6 +6,8 @@ const app = express();
 app.engine('hbs', exphbs({extname: '.hbs', defaultLayout: '_layout'}));
 app.set('view engine', 'hbs');
 
+app.use(express.static('public'));
+
 app.get('/', function (req, res) {
     res.render('home');
 });
