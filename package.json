@@ -15,14 +15,5 @@
   "bugs": {
     "url": "https://github.com/eredisg/sarahah-clone/issues"
   },
-  "homepage": "https://github.com/eredisg/sarahah-clone#readme",
-  "dependencies": {
-    "express": "^4.15.4",
-    "mysql2": "^1.4.2",
-    "sequelize": "^4.8.0"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
-  }
+  "homepage": "https://github.com/eredisg/sarahah-clone#readme"
 }
