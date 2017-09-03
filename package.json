@@ -1,0 +1,19 @@
+{
+  "name": "sarahah-clone",
+  "version": "1.0.0",
+  "description": "One Website, One Week Challenge | Week 1 (Sarahah Clone)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eredisg/sarahah-clone.git"
+  },
+  "author": "Eredis Gutierrez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eredisg/sarahah-clone/issues"
+  },
+  "homepage": "https://github.com/eredisg/sarahah-clone#readme"
+}
