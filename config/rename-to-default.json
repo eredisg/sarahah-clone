@@ -1,0 +1,15 @@
+{
+    "session": {
+        "secret": ""
+    },
+    "database": {
+        "uri": ""
+    },
+    "auth": {
+        "github": {
+          "clientID": "",
+          "clientSecret": "",
+          "callbackURL": ""
+        }
+    }
+}
