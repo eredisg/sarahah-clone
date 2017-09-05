@@ -17,10 +17,14 @@
   },
   "homepage": "https://github.com/eredisg/sarahah-clone#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "config": "^1.26.2",
     "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
-    "mysql2": "^1.4.2",
-    "sequelize": "^4.8.0"
+    "express-session": "^1.15.5",
+    "mongoose": "^4.11.10",
+    "passport": "^0.4.0",
+    "passport-github2": "^0.1.10"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
