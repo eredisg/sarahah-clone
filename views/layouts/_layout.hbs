@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sarahah Clone</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -16,12 +17,15 @@
         <a class="navbar-brand" href="#">Sarahah Clone</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav navbar-right ml-auto">
+            {{#if user}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="/">Hello, {{user.name}}</a>
                 </li>
+            {{else}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="/auth/github">Login with GitHub</a>
                 </li>
+            {{/if}}
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Us</a>
                 </li>
@@ -35,7 +39,7 @@
     <div class="container">
         {{{body}}}
     </div>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
