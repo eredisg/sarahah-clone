@@ -13,7 +13,15 @@ const app = express();
 
 mongoose.connect(config.database.uri);
 
-app.engine('hbs', exphbs({extname: '.hbs', defaultLayout: '_layout'}));
+app.engine('hbs', exphbs({
+    extname: '.hbs', 
+    defaultLayout: '_layout',
+    helpers: {
+        formatDate: (date) => {
+            return new Date(date).toLocaleDateString();
+        }
+    }
+}));
 app.set('view engine', 'hbs');
 
 app.use('/public', express.static('public'));
