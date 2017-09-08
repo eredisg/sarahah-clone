@@ -1,10 +1,34 @@
 $primaryColor: #10BBB3 ;
 $secondaryColor: #f5f8fa;
 
+@mixin display-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body {
     background-color: $secondaryColor;
-    font-family: 'Cairo', sans-serif;    
+    font-family: 'Cairo', sans-serif;
 }
 .navbar {
     background-color: $primaryColor;
+}
+
+.container { 
+    margin-top:.5em;
+}
+
+#profile-image {
+    @include display-center;
+    border-radius: 50%;
+}
+
+.col-6 > h3, .col-6 p {
+    text-align: center;
+}
+
+.submit-btn {
+    @include display-center;
+    margin-top: .5em;
 }
