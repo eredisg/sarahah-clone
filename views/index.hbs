@@ -1,1 +1,11 @@
-<h3>Home</h3>
+{{#if failure}}
+<div class="alert alert-danger alert-dismissible fade show" id="auto-alert" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>{{failure}}</strong>
+</div>
+{{/if}}
+<div class="container">
+    <p>Get "honest" feedback from github users like you!</p>
+</div>

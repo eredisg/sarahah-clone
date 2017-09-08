@@ -1,0 +1,22 @@
+{{#if success}}
+<div class="alert alert-success alert-dismissible fade show" id="auto-alert" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Success!</strong> {{success}}
+</div>
+{{/if}}
+<div class="row">
+    <div class="col-3 col-md-4"></div>
+    <div class="col-6 col-md-4">
+        <img src="https://avatars2.githubusercontent.com/u/{{user.githubId}}?v=4&s=200" alt="" id="profile-image">
+        <br>
+        <h3>{{user.name}}</h3>
+        <p>Submit an honest and constructive comment</p>
+        <form action="/{{user.name}}/submit" method="post">
+            <textarea class="form-control" name="comment" rows="4"></textarea>
+            <input class="btn btn-success submit-btn" type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="col-3 col-md-4"></div>
+</div>
