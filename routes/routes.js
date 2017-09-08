@@ -37,17 +37,28 @@ router.post('/:user/submit', (req, res) => {
             req.flash('error', 'A server side error occured. Please try again in a few minutes.')
             res.render('index', { failure: req.flash('error') })
         } else if (!user || usr !== user.name) {
-            req.flash('404', 'User ' + usr + ' could not be found')
+            req.flash('404', 'User could not be found')
             res.render('index', { failure: req.flash('404') })
         } else {
             user.comments.push({ comment, createdAt: Date.now() });
             user.save()
             .then((user) => {
-                req.flash('commentSent', 'You have submitted a comment to ' + user.name)
+                req.flash('commentSent', 'You have submitted a comment')
                 res.render('Submit', { user, success: req.flash('commentSent')});
             });
         }
     })
+});
+
+router.get('/profile/comments', (req, res) => {
+    const user = req.user;
+
+    if(!user) {
+        req.flash('notLoggedIn', 'You are not logged in. Please log in to view your comments.')
+        res.render('index', {failure: req.flash('notLoggedIn')});
+    } else {
+        res.render('comments', { user, comments: user.comments.reverse()});
+    }
 });
 
 router.get('/login', (req, res) => {
