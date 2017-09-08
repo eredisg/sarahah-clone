@@ -7,9 +7,9 @@
     },
     "auth": {
         "github": {
-          "clientID": "",
-          "clientSecret": "",
-          "callbackURL": ""
+            "clientID": "",
+            "clientSecret": "",
+            "callbackURL": ""
         }
     }
 }
